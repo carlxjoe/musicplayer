@@ -1,80 +1,34 @@
+* {
 
- {
  margin: 0;
+
  padding: 0;
+
  box-sizing: border-box;
+
 }
+
 body {
-            font-family: Verdana, cursive,Geneva, Tahoma, sans-serif;
-            background: #dedede;
-        }
+
+ font-family: cursive;
+
+}
+
 a {
+
  text-decoration: none;
+
 }
+
 li {
+
  list-style: none;
+
 }
-        .container {
-            max-width: 900px;
-            padding: 15px;
-            background-color: #fff;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .slider .slick-slide {
-            border: solid 1px #000;
-        }
-
-        .slider .slick-slide img {
-            width: 100%;
-        }
-
-        /* make button larger and change their positions */
-        .slick-prev, .slick-next {
-            width: 50px;
-            height: 50px;
-            z-index: 1;
-        }
-        .slick-prev {
-            left: 5px;
-        }
-        .slick-next {
-            right: 5px;
-        }
-        .slick-prev:before, 
-        .slick-next:before {
-            font-size: 40px;
-            text-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        
-        /* move dotted nav position */
-        .slick-dots {
-            bottom: 15px;
-        }
-        /* enlarge dots and change their colors */
-        .slick-dots li button:before {
-            font-size: 12px;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0,0,0,0.5);
-            opacity: 1;
-        }
-        .slick-dots li.slick-active button:before {
-            color: #dedede;
-        }
-
-        /* hide dots and arrow buttons when slider is not hovered */
-        .slider:not(:hover) .slick-arrow,
-        .slider:not(:hover) .slick-dots {
-            opacity: 0;
-        }
-        /* transition effects for opacity */
-        .slick-arrow,
-        .slick-dots {
-            transition: opacity 0.5s ease-out;
-        }
+/* NAVBAR STYLING STARTS */
 
 .navbar {
+
  display: flex;
 
  align-items: center;
@@ -180,5 +134,94 @@ li {
 .services:hover .dropdown {
 
  display: block;
+
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type=checkbox]{
+
+ display: none;
+
+} 
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+
+ display: none;
+
+ font-size: 24px;
+
+ user-select: none;
+
+}
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 768px) {
+
+.menu { 
+
+ display:none;
+
+ position: absolute;
+
+ background-color:teal;
+
+ right: 0;
+
+ left: 0;
+
+ text-align: center;
+
+ padding: 16px 0;
+
+}
+
+.menu li:hover {
+
+ display: inline-block;
+
+ background-color:#4c9e9e;
+
+ transition: 0.3s ease;
+
+}
+
+.menu li + li {
+
+ margin-top: 12px;
+
+}
+
+input[type=checkbox]:checked ~ .menu{
+
+ display: block;
+
+}
+
+.hamburger {
+
+ display: block;
+
+}
+
+.dropdown {
+
+ left: 50%;
+
+ top: 30px;
+
+ transform: translateX(35%);
+
+}
+
+.dropdown li:hover {
+
+ background-color: #4c9e9e;
+
+}
 
 }
